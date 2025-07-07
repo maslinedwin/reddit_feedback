@@ -1,4 +1,4 @@
-# Reddit Feedback AI - Dark Glassmorphism Edition
+# Reddit Feedback AI 
 
 A sophisticated Reddit feedback analysis tool with AI-powered insights, featuring a modern dark glassmorphism UI with liquid design elements.
 
