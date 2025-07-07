@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Database
+*.db-journal
+*.db-wal
+
+# Logs
+*.log
+logs/
+
+# Data files
+*.csv
+!requirements.txt
+
+# Config with secrets
+config.yaml
+!config.yaml.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*~
+
+# Test files
+test_*.py
+*_test.py
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Cache
+.cache/
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
