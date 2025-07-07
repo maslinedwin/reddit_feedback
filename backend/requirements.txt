@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+praw
+python-dotenv
+chromadb
+sentence-transformers
+langchain
+pandas
+pyyaml
+requests
+scikit-learn
+numpy
