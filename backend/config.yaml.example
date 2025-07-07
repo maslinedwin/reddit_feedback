@@ -1,0 +1,102 @@
+# Reddit Lead Generation Platform Configuration
+# Copy this file to config.yaml and fill in your credentials
+
+# Reddit API Configuration
+reddit:
+  client_id: "your_reddit_client_id"
+  client_secret: "your_reddit_client_secret"
+  user_agent: "YourApp/1.0 by YourRedditUsername"
+  username: "your_reddit_username"  # Optional, for authenticated requests
+  password: "your_reddit_password"  # Optional, for authenticated requests
+
+# Data Collection Settings
+collection:
+  posts_per_subreddit: 100  # Number of posts to collect per run
+  days_back: 30  # How many days of history to collect
+  comments_per_post: 50  # Max comments to collect per post
+  min_post_score: 1  # Minimum post score to include
+  min_comment_score: 1  # Minimum comment score to include
+
+# Analysis Configuration
+analysis:
+  min_activity_threshold: 5  # Minimum posts+comments for analysis
+  max_users_per_run: 200  # Max users to analyze per run
+  sentiment_keywords:
+    positive:
+      - "love"
+      - "great"
+      - "amazing"
+      - "excellent"
+      - "helpful"
+      - "worth it"
+      - "recommend"
+      - "happy"
+      - "satisfied"
+    negative:
+      - "hate"
+      - "terrible"
+      - "awful"
+      - "scam"
+      - "ripoff"
+      - "expensive"
+      - "disappointing"
+      - "frustrated"
+      - "broken"
+  creator_keywords:
+    "my channel": 10
+    "my content": 9
+    "my patreon": 10
+    "my subscribers": 8
+    "support me": 9
+    "i create": 8
+    "content creator": 10
+    "my audience": 7
+    "my fans": 8
+    "my videos": 7
+
+# Lead Scoring Weights (must sum to 1.0)
+lead_scoring:
+  creator_likelihood_weight: 0.4
+  discussion_starter_weight: 0.2
+  sentiment_weight: 0.2
+  karma_weight: 0.1
+  activity_weight: 0.1
+
+# Database Configuration
+database:
+  path: "reddit_leads.db"
+  backup_dir: "backups"
+  backup_retention_days: 30
+
+# Scheduler Settings
+scheduler:
+  daily_run_time: "02:00"  # 24-hour format
+  timezone: "UTC"
+  enable_notifications: false
+  notification_email: ""
+
+# API Rate Limiting
+rate_limits:
+  requests_per_minute: 30
+  cooldown_seconds: 2
+  max_retries: 3
+
+# Monitoring
+monitoring:
+  health_check_interval: 300  # seconds
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_retention_days: 7
+
+# RAG System Configuration
+rag:
+  embedding_model: "all-MiniLM-L6-v2"
+  similarity_threshold: 0.7
+  max_results: 10
+  update_on_startup: true
+
+# Advanced Settings
+advanced:
+  enable_user_enrichment: true
+  parallel_workers: 4
+  cache_ttl: 3600  # seconds
+  debug_mode: false
