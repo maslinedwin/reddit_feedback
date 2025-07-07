@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;        /* Pure black */
+    --foreground: 0 0% 100%;      /* Pure white */
+    --card: 0 0% 3%;              /* Near black #080808 */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 241 90% 64%;       /* Purple #514DFB from design.md */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 10%;        /* Dark gray */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%; /* Dimmed gray text */
+    --accent: 241 90% 64%;        /* Purple accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 7 97% 59%;     /* Red #fd4e30 from design.md */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;           /* Subtle border */
+    --input: 0 0% 5%;             /* Dark input background */
+    --ring: 241 90% 64%;          /* Purple ring */
+    --radius: 0.75rem;            /* Slightly rounder corners */
+    
+    /* Custom properties from design.md */
+    --success: 145 70% 52%;       /* Green #24c46e */
+    --warning: 33 100% 57%;       /* Mango #ffb723 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Smooth animations */
+  .animate-in {
+    animation: animate-in 0.5s ease-out;
+  }
+  
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Gradient text animation */
+  .gradient-text {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
